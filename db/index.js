@@ -16,5 +16,5 @@ db.once('open', function() {
     console.log('Connected to Mongo db')
 })
 db.on('close', function(str) {
-   // console.log("DB disconnected: "+str)
+    console.log("DB disconnected: "+str)
 })
