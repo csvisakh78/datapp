@@ -4,7 +4,16 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node server.js",
+    "test": "jest --coverage --forceExit",
+    "prestart": "npm install",
+    "prepare": "husky install"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "coveragePathIgnorePatterns": [
+      "/node_modules/"
+    ]
   },
   "keywords": [],
   "author": "Visakh cs <csvisakh7@gmail.com>",
@@ -13,6 +22,13 @@
     "dotenv": "^11.0.0",
     "express": "^4.17.1",
     "express-validator": "^6.14.0",
-    "mongoose": "^5.10.0"
+    "mongoose": "^5.10.0",
+    "swagger-ui-express": "^4.3.0",
+    "yamljs": "^0.3.0"
+  },
+  "devDependencies": {
+    "husky": "^7.0.4",
+    "jest": "^27.4.7",
+    "supertest": "^6.2.1"
   }
 }

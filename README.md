@@ -15,7 +15,13 @@ This app contain api for fetching data from server
 
 - Clone the repo
 - Create .env file from env.example
-- Run this command in terminal `npm run start`
+    ## Run using docker
+    - docker build . -t testapp
+    - docker run -p 3000:3000 -d testapp
+    ## Run as normal app
+    - Run this command in terminal `npm run start`
+
+
 
 # Enviroment Variables
     ```bash
