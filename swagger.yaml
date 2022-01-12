@@ -1,6 +1,6 @@
 swagger: "2.0"
 info:
-  description: "This is a documentation for datapp api"
+  description: "Documentation for datapp api"
   version: "v1"
   title: "Data App"
 host: "datapp-interview.herokuapp.com"
