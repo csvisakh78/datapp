@@ -1,0 +1,83 @@
+swagger: "2.0"
+info:
+  description: "This is a documentation for datapp api"
+  version: "v1"
+  title: "Data App"
+host: "datapp-interview.herokuapp.com"
+schemes:
+  - "https"
+
+paths:
+  /records:
+    post:
+      tags:
+      - "records"
+      summary: "Fetch Records"
+      operationId: "fetchRecords"
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
+      parameters:
+      - in: "body"
+        name: "body"
+        schema:
+            $ref: '#/definitions/fetchRecordsSchema'
+      responses:
+        "200":
+          description: "Users invited"
+          schema:
+            $ref: "#/definitions/fetchRecordsResponse"
+        "404":
+          description: "Space not found"
+        "422":
+          description: "User is already in space"
+
+definitions:
+  fetchRecordsSchema:
+    type: "object"
+    properties:
+      startDate:
+        description: "Fetch record starting from date"
+        type: "string"
+        example: 2014/10/12
+      endDate:
+        description: "Fetch record till date"
+        type: "string"
+        example: 2017/10/12
+      minCount:
+        description: "Minimum sum value for sum of counts array"
+        type: "number"
+        example: 100
+      maxCount:
+        description: "Maximum sum value for sum of counts array"
+        type: "number"
+        example: 100
+
+  fetchRecordsResponse:
+      type: "object"
+      properties:
+        code:
+          type: "number"
+          example: 0
+        msg:
+          type: "string"
+          example: success
+        records:
+          type: "array"
+          items:
+            type: "object"
+            properties:
+              key: 
+                type: "string"
+              createdAt:
+                type: "string"
+              totalCount:
+                type: "number"
+          example: 
+          - key: TAKwGc6Jr4i8Z487
+            createdAt: "2017-01-28T01:22:14.398Z"
+            totalCount: 120
+          - key: YAKwGc6Jr4i8Z487
+            createdAt: "2417-01-28T01:22:14.398Z"
+            totalCount: 122
