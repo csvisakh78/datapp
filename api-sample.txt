@@ -1,14 +1,14 @@
 API
 ------------------
 
-POST http://localhost:5000/api/records
+POST https://datapp-interview.herokuapp.com/api/records
 Request Body
 
 {
 	"startDate": "2014/10/12",
 	"endDate":  "2021/10/12",
 	"minCount":4,
-	"maxCount":122
+	"maxCount":1000
 }
 
 Response
@@ -44,7 +44,7 @@ CURL
 -----------------
 
 curl -X POST \
-  http://localhost:5000/api/records \
+  https://datapp-interview.herokuapp.com/api/records \
   -H 'cache-control: no-cache' \
   -H 'content-type: application/json' \
   -H 'postman-token: 99481de3-e694-c701-483f-6c76d03f505d' \
@@ -52,5 +52,5 @@ curl -X POST \
 	"startDate": "2014/10/12",
 	"endDate":  "2021/10/12",
 	"minCount":4,
-	"maxCount":122
+	"maxCount":1000
 }'
