@@ -53,7 +53,7 @@ definitions:
       maxCount:
         description: "Maximum sum value for sum of counts array"
         type: "number"
-        example: 100
+        example: 1000
 
   fetchRecordsResponse:
       type: "object"
