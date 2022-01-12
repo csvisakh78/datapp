@@ -7,6 +7,7 @@
     "start": "node index.js",
     "test": "jest",
     "prestart": "npm install",
+    "prepare": "husky install"
   },
   "jest": {
     "testEnvironment": "node",
