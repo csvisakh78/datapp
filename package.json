@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
-    "test": "jest",
+    "start": "node server.js",
+    "test": "jest --coverage --forceExit",
     "prestart": "npm install",
     "prepare": "husky install"
   },
@@ -14,12 +14,6 @@
     "coveragePathIgnorePatterns": [
       "/node_modules/"
     ]
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "npm run test",
-      "pre-push": "npm run test"
-    }
   },
   "keywords": [],
   "author": "Visakh cs <csvisakh7@gmail.com>",
